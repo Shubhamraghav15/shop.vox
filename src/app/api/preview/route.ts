@@ -13,7 +13,7 @@ export async function GET(
   },
 ): Promise<Response> {
   const token = req.cookies.get(payloadToken)?.value
-  const { searchParams } = new URL(req.url)
+  const { searchParams } = new URL(req?.url)
   const url = searchParams.get('url')
   const secret = searchParams.get('secret')
 

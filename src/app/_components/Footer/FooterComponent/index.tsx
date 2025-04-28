@@ -41,7 +41,7 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
         <Gutter>
           <div className={classes.wrap}>
             <Link href="/">
-              <Image src="/logo-white.svg" alt="logo" width={170} height={50} />
+              <Image src="/logo-vox.svg" alt="logo" width={80} height={20} />
             </Link>
 
             <p>{footer?.copyright}</p>
@@ -54,7 +54,7 @@ const FooterComponent = ({ footer }: { footer: Footer }) => {
                   <Button
                     key={item.link.label}
                     el="link"
-                    href={item.link.url}
+                    href={item.link?.url}
                     newTab={true}
                     className={classes.socialLinkItem}
                   >

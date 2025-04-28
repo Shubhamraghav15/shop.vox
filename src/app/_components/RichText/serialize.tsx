@@ -87,7 +87,7 @@ const serialize = (children?: Children): React.ReactNode[] =>
           <CMSLink
             key={i}
             type={node.linkType === 'internal' ? 'reference' : 'custom'}
-            url={node.url}
+            url={node?.url}
             reference={node.doc as any}
             newTab={Boolean(node?.newTab)}
           >
