@@ -17,7 +17,7 @@ export const MediumImpactHero: React.FC<Page['hero']> = props => {
         <RichText className={classes.richText} content={richText} />
         {Array.isArray(links) && (
           <ul className={classes.links}>
-            {links.map(({ link }, i) => {
+            {links?.map(({ link }, i) => {
               return (
                 <li key={i}>
                   <CMSLink className={classes.link} {...link} />

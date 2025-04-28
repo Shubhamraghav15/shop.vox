@@ -10,7 +10,7 @@ export const LoadingShimmer: React.FC<{
 
   return (
     <div className={classes.loading}>
-      {arrayFromNumber.map((_, index) => (
+      {arrayFromNumber?.map((_, index) => (
         <div key={index} className={classes.shimmer} />
       ))}
     </div>

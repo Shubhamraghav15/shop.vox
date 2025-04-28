@@ -20,8 +20,8 @@ export const ContentBlock: React.FC<
     <Gutter className={classes.content}>
       <div className={classes.grid}>
         {columns &&
-          columns.length > 0 &&
-          columns.map((col, index) => {
+          columns?.length > 0 &&
+          columns?.map((col, index) => {
             const { enableLink, richText, link, size } = col
 
             return (

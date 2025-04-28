@@ -7,8 +7,8 @@ export const populateArchiveBlock: AfterReadHook = async ({ doc, context, req: {
   // then hydrate it on your front-end
 
   const layoutWithArchive = await Promise.all(
-    doc.layout.map(async block => {
-      if (block.blockType === 'archive') {
+    doc?.layout?.map(async block => {
+      if (block?.blockType === 'archive') {
         const archiveBlock = block as Extract<Page['layout'][0], { blockType: 'archive' }> & {
           populatedDocs: Array<{
             relationTo: 'products' | 'pages'
@@ -42,10 +42,10 @@ export const populateArchiveBlock: AfterReadHook = async ({ doc, context, req: {
 
           return {
             ...block,
-            populatedDocsTotal: res.totalDocs,
-            populatedDocs: res.docs.map((thisDoc: Product) => ({
-              relationTo: archiveBlock.relationTo,
-              value: thisDoc.id,
+            populatedDocsTotal: res?.totalDocs,
+            populatedDocs: res?.docs?.map((thisDoc: Product) => ({
+              relationTo: archiveBlock?.relationTo,
+              value: thisDoc?.id,
             })),
           }
         }

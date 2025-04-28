@@ -38,13 +38,13 @@ export const seed = async (payload: Payload): Promise<void> => {
 
   // clear the database
   await Promise.all([
-    ...collections.map(async collection =>
+    ...collections?.map(async collection =>
       payload.delete({
         collection: collection as 'media',
         where: {},
       }),
     ), // eslint-disable-line function-paren-newline
-    ...globals.map(async global =>
+    ...globals?.map(async global =>
       payload.updateGlobal({
         slug: global as 'header',
         data: {},
@@ -76,7 +76,7 @@ export const seed = async (payload: Payload): Promise<void> => {
   let image2ID = image2Doc.id
   let image3ID = image3Doc.id
 
-  if (payload.db.defaultIDType === 'text') {
+  if (payload?.db?.defaultIDType === 'text') {
     image1ID = `"${image1ID}"`
     image2ID = `"${image2ID}"`
     image3ID = `"${image3ID}"`

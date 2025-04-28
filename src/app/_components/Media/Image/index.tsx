@@ -48,7 +48,7 @@ export const Image: React.FC<MediaProps> = props => {
 
   // NOTE: this is used by the browser to determine which image to download at different screen sizes
   const sizes = Object.entries(breakpoints)
-    .map(([, value]) => `(max-width: ${value}px) ${value}px`)
+    ?.map(([, value]) => `(max-width: ${value}px) ${value}px`)
     .join(', ')
 
   return (

@@ -20,9 +20,9 @@ export const CustomHero: React.FC<Page['hero']> = ({ richText, media, links }) =
         <div className={classes.heroTextBox}>
           <RichText content={richText} />
 
-          {Array.isArray(links) && links.length > 0 && (
+          {Array.isArray(links) && links?.length > 0 && (
             <ul className={classes.links}>
-              {links.map(({ link }, i) => {
+              {links?.map(({ link }, i) => {
                 return (
                   <li key={i}>
                     <CMSLink {...link} />

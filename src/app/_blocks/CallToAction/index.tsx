@@ -27,7 +27,7 @@ export const CallToActionBlock: React.FC<
             <RichText className={classes.richText} content={richText} />
           </div>
           <div className={classes.linkGroup}>
-            {(links || []).map(({ link }, i) => {
+            {(links || [])?.map(({ link }, i) => {
               return <CMSLink key={i} {...link} invert={invertBackground} />
             })}
           </div>
