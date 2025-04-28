@@ -57,3 +57,29 @@
 .description {
   padding: 30px 0;
 }
+.variantSection {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;       /* allow wrapping on narrow screens&#8203;:contentReference[oaicite:3]{index=3} */
+  margin-bottom: 1rem;
+}
+.variantCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+  margin: 0.5rem;
+  text-decoration: none;
+}
+.variantCard img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+  object-fit: cover;
+}
+.variantName {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  text-align: center;
+}

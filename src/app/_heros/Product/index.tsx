@@ -50,7 +50,32 @@ export const ProductHero: React.FC<{
           <h6>Description</h6>
           <p>{description}</p>
         </div>
-
+        <div className={classes.variantSection}>
+        <a href="/product/variant1" className={classes.variantCard}>
+          <img
+            src={""}
+            alt="Sunset Red variant"
+            onError={(e) => { if (e.target.src !== placeholder) e.target.src = placeholder; }}
+          />
+          <span className={classes.variantName}>Sunset Red</span>
+        </a>
+        <a href="/product/variant2" className={classes.variantCard}>
+          <img
+            src={"oceanBlueImage"}
+            alt="Ocean Blue variant"
+            onError={(e) => { if (e.target.src !== placeholder) e.target.src = placeholder; }}
+          />
+          <span className={classes.variantName}>Ocean Blue</span>
+        </a>
+        <a href="/product/variant3" className={classes.variantCard}>
+          <img
+            src={"forestGreenImage"}
+            alt="Forest Green variant"
+            onError={(e) => { if (e.target.src !== placeholder) e.target.src = placeholder; }}
+          />
+          <span className={classes.variantName}>Forest Green</span>
+        </a>
+      </div>
         <AddToCartButton product={product} className={classes.addToCartButton} />
       </div>
     </Gutter>

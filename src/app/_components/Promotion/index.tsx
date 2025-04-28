@@ -30,7 +30,7 @@ const Promotion = () => {
         clearInterval(timerInterval)
         // You can add code here to handle what happens when the target date is reached.
       }
-    }, 1000)
+    }, 1000,[targetDate])
 
     return () => {
       clearInterval(timerInterval) // Cleanup the interval when the component unmounts.
